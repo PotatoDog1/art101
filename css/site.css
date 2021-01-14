@@ -4,3 +4,10 @@ a#stuff-purple{
 li#stuff-orange{
   color:orange;
 }
+
+li.make_it_bleu{
+  color:blue;
+}
+li#stuff-yellow{
+  color:yellow;
+}
