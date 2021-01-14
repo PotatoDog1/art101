@@ -1,6 +1,12 @@
-a, ol{
+a{
   color:blue;
 }
 li{
   color:yellow;
+}
+li#stuff-purple{
+  color:purple;
+}
+li#stuff-orange{
+  color:orange;
 }
