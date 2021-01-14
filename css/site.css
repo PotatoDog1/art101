@@ -1,10 +1,4 @@
-a{
-  color:blue;
-}
-li{
-  color:yellow;
-}
-li#stuff-purple{
+a#stuff-purple{
   color:purple;
 }
 li#stuff-orange{
