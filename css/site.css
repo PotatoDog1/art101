@@ -1,3 +1,9 @@
 nav, a{
   color:green;
 }
+li{
+  color:blue;
+}
+a.special{
+  color:yellow;
+}
