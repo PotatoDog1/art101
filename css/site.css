@@ -1,13 +1,41 @@
-a#stuff-purple{
-  color:purple;
+/* base color: #FFEAE8 */
+
+main h1 {
+  text-align: center;
+  color:#7FB396;
 }
-li#stuff-orange{
-  color:orange;
+nav h1 {
+  color: #E8FFF2;
 }
 
-li.make_it_bleu{
-  color:blue;
+body {
+  margin:20px;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: #B39391;
 }
-.ul_li_5, a{
-  color:yellow;
+
+#content {
+  padding: 30px;
+  border: 5px dashed #FFFFFF;
+  background-color: #ffeae8;
 }
+
+nav {
+  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 5px dashed #FFFFFF;
+  background-color: #7FB396;
+}
+ul li {
+  color: #E8FFF2;
+}
+.ul_li_class, ol li {
+  color: #FFEAE8;
+}
+
+/* #ProfilePic {
+  float: right; margin: 0px 0px 15px 15px;
+} */
