@@ -1,0 +1,51 @@
+img {
+  width: 50%;
+  margin-bottom: 15px;
+  float: right;
+  margin-top:-170px;
+  padding-bottom: 15px;
+  margin-right: 200px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Courier New;
+  color: darkgreen;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#script, script {
+  color: goldenrod;
+}
+
+#challenges {
+  color: hotpink;
+  margin-right: 700px;
+  padding-bottom: 40px;
+}
+
+#problems {
+  color: red;
+  margin-left: 625px;
+  margin-top: -90px;
+  padding-bottom: 20px;
+}
+
+#results {
+  color: purple;
+  float:left;
+}
+
+div {
+  border: 3px dashed dodgerblue;
+  background-color: #9EFDFF;
+  margin: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+body {
+  background-color: #47A7A8;
+  font-size: 20px;
+}
