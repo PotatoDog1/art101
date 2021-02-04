@@ -1,0 +1,44 @@
+img {
+  float: right;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 284px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#yourname {
+  color: blue;
+  font-size: 20px;
+}
+
+#docwrite {
+  color: purple;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  text-shadow: 3px 3px 3px pink;
+}
+
+h2, h3 {
+  font-size: 30px;
+  text-shadow: 2px 2px 2px #95edea;
+}
+body {
+  margin: 35px;
+  background-color: #bbedda;
+}
+
+p {
+  font-size: 20px;
+}
+#wholebox {
+  border: 5px solid #96e388;
+  padding: 20px;
+  background-color: white;
+}

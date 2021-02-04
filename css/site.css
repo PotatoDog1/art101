@@ -3,9 +3,11 @@
 main h1 {
   text-align: center;
   color:#7FB396;
+  font-size: 50px;
 }
-nav h1 {
+nav, h1, h2 {
   color: #E8FFF2;
+  text-shadow: 2px 2px pink;
 }
 
 body {
@@ -16,8 +18,15 @@ body {
   background-color: #B39391;
 }
 
+p, ul {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 30px;
+}
 #content {
-  padding: 30px;
+  padding: 20px;
   border: 5px dashed #FFFFFF;
   background-color: #ffeae8;
 }
@@ -35,6 +44,7 @@ ul li {
 .ul_li_class, ol li {
   color: #FFEAE8;
 }
+
 
 /* #ProfilePic {
   float: right; margin: 0px 0px 15px 15px;
