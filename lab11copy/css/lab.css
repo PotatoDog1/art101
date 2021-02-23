@@ -1,0 +1,14 @@
+.problemsColorChange {
+  background-color: red;
+  color: white;
+}
+
+.resultsColorChange {
+  background-color: #645ea8;
+  color: #ff5ea9;
+}
+
+.challengeColorChange {
+  background-color: #9efa93;
+  color: #eefa93;
+}
