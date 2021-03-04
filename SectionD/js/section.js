@@ -24,13 +24,35 @@
 //
 // userinfo("Toni", "Rouhana");
 
-var div_1 = document.createElement("div_1");
-div_1.id = "div_1";
-div_1.innerHTML = "This is annoying";
-document.body.appendChild(div_1);
-console.log(div_1.innerHTML);
+// var div_1 = document.createElement("div_1");
+// div_1.id = "div_1";
+// div_1.innerHTML = "This is annoying";
+// document.body.appendChild(div_1);
+// console.log(div_1.innerHTML);
+//
+// function main() {
+//   outputEl = document.getElementById("div_1");
+//   outputEl.innerHTML = "This is more annoying than I thought!";
+// }
 
-function main() {
-  outputEl = document.getElementById("div_1");
-  outputEl.innerHTML = "This is more annoying than I thought!";
+function getajaxdata(){
+$.ajax({
+  url: "https://en.wikipedia.org/api/rest_v1/page/",
+  type: "GET",
+  datatype: "json",
+  success: successFun,
+  error: errorFun,
+  complete: function(xhr,status){
+    console.log("the request has been done");
+  }
+})
 }
+function successFun(result){
+  console.log("Success!" + result);
+  $("#ajax_text").html(result);
+}
+
+function errorFun(xhr,status,strErr){
+  console.log("error"+strErr);
+}
+$('#ajax_get').click(getajaxdata);

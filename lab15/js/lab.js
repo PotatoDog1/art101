@@ -8,12 +8,18 @@
 
 // Using the core $.ajax() method
 // api endpoint= https://xkcd.com/info.0.json
-$("#activate").click(doAPIStuff);
+$("#activate").click(doAPIStuffAPOD);
+$("#activate").click(doAPIStuffComic);
 
-function putTextOnPage(text){
+function putTextOnPageComic(text){
+  $("#output2").html(text);
+}
+
+function putTextOnPageAPOD(text){
   $("#output").html(text);
 }
 
+// using a tutorial to do the NASA APOD
 // function doAPIStuff() {
 //   console.log("doing api stuff");
 // //   var url = "https://api.nasa.gov/planetary/apod?api_key=YdheUYkCQCutDdoisfF9oAjtiDymR1zZtYi18NmR";
@@ -31,7 +37,7 @@ function putTextOnPage(text){
 // }
 
 //
-function doAPIStuff() {
+function doAPIStuffComic() {
   console.log("doing api stuff");
   $.ajax({
     // The URL for the request (from the api docs)
@@ -54,53 +60,53 @@ function doAPIStuff() {
       str += "<img src='" + imageURL + "'>"
       console.log("Success!", textData);
       console.log(data);
-      putTextOnPage(str);
+      putTextOnPageComic(str);
     },
     // What we do if the api call fails
     error: function (jqXHR, textStatus, errorThrown) {
       // do stuff
       console.log("Error:", textStatus, errorThrown);
-      putTextOnPage(errorThrown + " Status:" + status);
+      putTextOnPageComic(errorThrown + " Status:" + status);
     }
   })
 }
 
-// function doAPIStuff() {
-//   console.log("doing api stuff");
-//   $.ajax({
-//     // The URL for the request (from the api docs)
-//     url: "https://api.nasa.gov/planetary/apod",
-//     // The data to send (will be converted to a query string)
-//     data: {
-//       api_key: "YdheUYkCQCutDdoisfF9oAjtiDymR1zZtYi18NmR",
-//     },
-//     // Whether this is a POST or GET request
-//     type: "GET",
-//     // The type of data we expect back
-//     dataType : "json",
-//     // What do we do when the api call is successful
-//     // all the action goes in here
-//     success: function(data) {
-//       // do stuff
-//       var textData = JSON.stringify(data);
-//       var str = "";
-//       var imageURL = data.hdurl;
-//       var date = data.date;
-//       var explanation = data.explanation;
-//       var copyright = data.copyright;
-//       str += "<h2>" + date + "</h2>";
-//       str += "<img src='" + imageURL + "'>";
-//       str += explanation;
-//       str += "<br>Copyright: " + copyright;
-//       console.log("Success!", textData);
-//       console.log(data);
-//       putTextOnPage(str);
-//     },
-//     // What we do if the api call fails
-//     error: function (jqXHR, textStatus, errorThrown) {
-//       // do stuff
-//       console.log("Error:", textStatus, errorThrown);
-//       putTextOnPage(errorThrown + " Status:" + status);
-//     }
-//   })
-// }
+function doAPIStuffAPOD() {
+  console.log("doing api stuff");
+  $.ajax({
+    // The URL for the request (from the api docs)
+    url: "https://api.nasa.gov/planetary/apod",
+    // The data to send (will be converted to a query string)
+    data: {
+      api_key: "YdheUYkCQCutDdoisfF9oAjtiDymR1zZtYi18NmR",
+    },
+    // Whether this is a POST or GET request
+    type: "GET",
+    // The type of data we expect back
+    dataType : "json",
+    // What do we do when the api call is successful
+    // all the action goes in here
+    success: function(data) {
+      // do stuff
+      var textData = JSON.stringify(data);
+      var str = "";
+      var imageURL = data.url;
+      var date = data.date;
+      var explanation = data.explanation;
+      var copyright = data.copyright;
+      str += "<h2>Date: ".fontcolor("white") + date + "</h2><br>";
+      str += "<img id=my-image src='" + imageURL + "'><br>";
+      str += explanation;
+      str += "<br>Copyright: ".fontcolor("white") + copyright;
+      console.log("Success!", textData);
+      console.log(data);
+      putTextOnPageAPOD(str);
+    },
+    // What we do if the api call fails
+    error: function (jqXHR, textStatus, errorThrown) {
+      // do stuff
+      console.log("Error:", textStatus, errorThrown);
+      putTextOnPageAPOD(errorThrown + " Status:" + status);
+    }
+  })
+}
