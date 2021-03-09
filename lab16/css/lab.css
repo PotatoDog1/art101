@@ -1,0 +1,15 @@
+body {
+  background-color: #34b8c7;
+  margin: 30px;
+  font-family: 'Bree Serif', 'Verdana';
+  font-size: 18px;
+  padding: 30px;
+}
+
+#output {
+  border: solid 2px black;
+  height: 500px;
+  padding: 30px;
+  margin: 30px;
+  background-color: #f2cbcb;
+}

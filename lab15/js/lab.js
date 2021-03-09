@@ -8,8 +8,13 @@
 
 // Using the core $.ajax() method
 // api endpoint= https://xkcd.com/info.0.json
-$("#activate").click(doAPIStuffAPOD);
-$("#activate").click(doAPIStuffComic);
+// $("#activate").click(doAPIStuffAPOD);
+// $("#activate").click(doAPIStuffComic);
+$(document).ready(function() {
+  console.log("ready!");
+  doAPIStuffAPOD();
+  doAPIStuffComic();
+})
 
 function putTextOnPageComic(text){
   $("#output2").html(text);
