@@ -7,7 +7,7 @@ main h1 {
 }
 nav, h1, h2 {
   color: #E8FFF2;
-  text-shadow: 2px 2px pink;
+  text-shadow: 1px 1px pink;
 }
 
 body {
@@ -26,9 +26,10 @@ h2 {
   font-size: 30px;
 }
 #content {
-  padding: 20px;
+  padding: 30px;
   border: 5px dashed #FFFFFF;
   background-color: #ffeae8;
+  height: 650px;
 }
 
 nav {
@@ -46,6 +47,23 @@ ul li {
 }
 
 
-#ProfilePic {
+img {
   float: right;
+  width: 30%;
+  /* padding-left: 30px; */
+  box-shadow: 5px 5px 10px;
+}
+
+#intro {
+  background-color: lightblue;
+  width: 700px;
+  margin-left: 20px;
+  padding: 20px;
+
+}
+
+#hi {
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px 1px #e69a9e;
 }
